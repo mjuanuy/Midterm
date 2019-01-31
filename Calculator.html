@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+	<div align="center">
+		<table>
+			<label>Simple Calculator</label>
+			<br>
+			<input type="text" id ="display" name="display">
+			<tr>
+				<td><button onclick="one()">1</button></td>
+				<td><button onclick="two()">2</button></td>
+				<td><button onclick="three()">3</button></td>
+				<td><button onclick="add()">+</button></td>
+			</tr>
+			 <tr>
+				<td><button onclick="four()">4</button></td>
+				<td><button onclick="five()">5</button></td>
+				<td><button onclick="six()">6</button></td>
+				<td><button onclick="subtract()">-</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="seven()">7</button></td>
+				<td><button onclick="eight()">8</button></td>
+				<td><button onclick="nine()">9</button></td>
+				<td><button onclick="multiply()">*</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="clears()">C</button></td>
+				<td><button onclick="zero()">0</button></td>
+				<td><button onclick="modulo()">%</button></td>
+				<td><button onclick="divide()">/</button></td>
+			</tr>
+
+
+		</table>
+
+		<button onclick="equals()" id="equals">=</button>
+		<label id="mine">by Marvin Benigra</label>
+	</div>
+
+
+
+
+</body>
+</html>
+<script type="text/javascript">
+	let n1 ="";
+	let n2="";
+	let operation=""; //declared this so that when the operator is clicked it will assign a value that will be used
+	//in the if else
+
+	function add(){ //add function when clicked by the button add
+		n1= document.getElementById('display').value;
+		document.getElementById('display').value="";
+		operation="+";
+	}
+	function subtract(){ //subtract function
+		n1= document.getElementById('display').value;
+		document.getElementById('display').value="";
+		operation="-";
+	}
+	function multiply(){ //multiply function
+		n1= document.getElementById('display').value;
+		document.getElementById('display').value="";
+		operation="*";
+	}
+	function divide(){ //divide function
+		n1= document.getElementById('display').value;
+		document.getElementById('display').value="";
+		operation="/";
+	}
+	function modulo(){ //modulo function
+		n1= document.getElementById('display').value;
+		document.getElementById('display').value="";
+		operation="%";
+	}
+
+
+
+
+
+
+
+	function equals(){
+		if(operation == "+"){
+			n2=document.getElementById('display').value;
+			document.getElementById('display').value= parseFloat(n1) + parseFloat(n2);
+		}
+		else if(operation == "-"){
+			n2=document.getElementById('display').value;
+			document.getElementById('display').value= parseFloat(n1) - parseFloat(n2);
+		}
+		else if(operation == "*"){
+			n2=document.getElementById('display').value;
+			document.getElementById('display').value= parseFloat(n1) * parseFloat(n2);
+		}
+		else if(operation == "/"){
+			n2=document.getElementById('display').value;
+			document.getElementById('display').value= parseFloat(n1) / parseFloat(n2);
+		}
+		else if(operation == "%"){
+			n2=document.getElementById('display').value;
+			document.getElementById('display').value= parseFloat(n1) %  parseFloat(n2);
+		}
+	}
+
+	function clears(){
+		document.getElementById('display').value ="";
+	}
+
+
+	function one(){
+		document.getElementById('display').value +='1';
+	}
+	function two(){
+		document.getElementById('display').value +='2';
+	}
+	function three(){
+		document.getElementById('display').value +='3';
+	}
+	function four(){
+		document.getElementById('display').value +='4';
+	}
+	function five(){
+		document.getElementById('display').value +='5';
+	}
+	function six(){
+		document.getElementById('display').value +='6';
+	}
+	function seven(){
+		document.getElementById('display').value +='7';
+	}
+	function eight(){
+		document.getElementById('display').value +='8';
+	}
+	function nine(){
+		document.getElementById('display').value +='9';
+	}
+	function zero(){
+		document.getElementById('display').value +='0';
+	}
+
+
+
+
+</script>
